@@ -40,4 +40,4 @@ mean_std_dataset$subject.id<-as.factor(mean_std_dataset$subject.id)
 grouped_dataset <- mean_std_dataset %>% group_by(activity,subject.id) %>% summarise_each(funs(mean))
 
 ##Our output
-write_table(grouped_dataset,"cleaningDataCourseProject.txt", row.name=FALSE )
+write.table(grouped_dataset,"cleaningDataCourseProject.txt", row.names=FALSE )
